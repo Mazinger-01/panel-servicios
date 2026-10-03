@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Hunter</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+    <header class="header"> <!-- Encabezado de la página-->
+        <h1>Services panel</h1>
+        <p>Last Update: 2 october de 2026, 19:00</p>
+    </header>
+
+    <nav class="menu"> <!--Menu de navegación-->
+        <ul>
+            <li><a href="#summary">Summary</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#request">Request</a></li>
+        </ul>
+    </nav>
+
+    <main class="content"> <!--Contenido principal, solo uno por página-->
+        <section id="summary"><!--Bloque temático con su propio subtítulo-->
+            <h2>Summary</h2>
+            <article class="target">
+                <h3>Today Request</h3>
+                <p class="value">1,240</p>
+                <p class="detail">12% more than yesterday</p>
+            </article>
+        </section>
+        <section id="services">
+            <h2>Services</h2>
+            <article class="target">
+                <h3>Active Services</h3>
+                <p class="value">8 of 9</p>
+                <p class="detail">1 services down</p>
+            </article>
+        </section>
+        <section id="request">
+            <h2>Request</h2>
+            <article class="target">
+                <h3>Response time</h3>
+                <p class="value">182 ms</p>
+                <p class="detail">Today's average</p>
+            </article>
+            <article class="target">
+                <h3>Today error</h3>
+                <p class="value">14</p>
+                <p class="detail">1.1% of requests</p>
+            </article>
+        </section>
+    </main>
+
+    <h3>Latest Requests</h3>
+    <table class="table">
+        <thead>
+            <tr class="title-table">
+                <th>Hour</th>
+                <th>Service</th>
+                <th>Request</th>
+                <th>Status</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>18:59</td>
+                <td>Authentication</td>
+                <td>Login</td>
+                <td class="status-ok">Successful</td>
+                <td>120 ms</td>
+            </tr>
+            <tr>
+                <td>18:58</td>
+                <td>Payments</td>
+                <td>Create payment</td>
+                <td class="status-ok">Successful</td>
+                <td>310 ms</td>
+            </tr>
+            <tr>
+                <td>18:57</td>
+                <td>Notifications</td>
+                <td>Send email</td>
+                <td class="status-error">Error</td>
+                <td>2,040 ms</td>
+            </tr>
+            <tr>
+                <td>18:55</td>
+                <td>Payments</td>
+                <td>Check balance</td>
+                <td class="status-ok">Successful</td>
+                <td>95 ms</td>
+            </tr>
+            <tr>
+                <td>18:54</td>
+                <td>Authentication</td>
+                <td>Create payment</td>
+                <td>Log out</td>
+                <td>88 ms</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <footer class="footer">
+        <p>Panel de práctica. Los datos son de ejemplo</p>
+    </footer>
+
+    <h2>Services</h2>
+    <ul class="list-services">
+        <li>Authentication: Active</li>
+        <li>Payments: Active</li>
+        <li>Notification: <span class="status-error">Fallen</span></li>
+    </ul>
+</body>
+
+</html>
