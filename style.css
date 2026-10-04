@@ -11,6 +11,9 @@ body {
     padding: 20px 24px;
     background-color: #14304f;
     color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header h1 {
@@ -21,7 +24,7 @@ body {
 .header p {
     font-size: 14px;
     color: #c5d3e2;
-    margin: 4px 0 0 0;
+    margin: 0;
 }
 
 .content {
@@ -55,17 +58,14 @@ h2 {
 .menu ul {
     margin: 0;
     padding: 0;
-    list-style: none;
-    /*quita las viñetas de la lista*/
-}
-
-.menu li {
-    display: inline-block;
+    list-style: none; /*quita las viñetas de la lista*/
+    display: flex;
+    gap: 16px;
 }
 
 .menu a {
-    display: inline-block;
-    padding: 12px 16px 12px 0;
+    display: block;
+    padding: 12px 0;
     color: #14304f;
     font-weight: bold;
     text-decoration: none;
