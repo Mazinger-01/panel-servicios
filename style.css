@@ -5,6 +5,15 @@ body {
     font-size: 16px;
     line-height: 1.5;
     margin: 0;
+
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+        "header header"
+        "menu    content"
+        "menu   footer";
+    min-height: 100vh;
 }
 
 .header {
@@ -14,6 +23,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    grid-area: header;
 }
 
 .header h1 {
@@ -29,6 +39,8 @@ body {
 
 .content {
     padding: 24px;
+    grid-area: content;
+    min-width: 0;
 }
 
 h2 {
@@ -38,21 +50,17 @@ h2 {
 
 .target {
     box-sizing: border-box;
-    width: 180px;
-    margin: 0 12px 12px 0;
     padding: 12px;
     background-color: #ffffff;
     border: 1px solid #d9dfe7;
     border-radius: 8px;
-    display: inline-block;
-    /*decide como se acomoda una caja respecto a las demás*/
-    vertical-align: top;
 }
 
 .menu {
-    padding: 0 24px;
+    padding: 16px 24px;
     background-color: #ffffff;
-    border-bottom: 1px solid #d9dfe7;
+    border-right: 1px solid #d9dfe7;
+    grid-area: menu;
 }
 
 .menu ul {
@@ -60,12 +68,13 @@ h2 {
     padding: 0;
     list-style: none; /*quita las viñetas de la lista*/
     display: flex;
-    gap: 16px;
+    flex-direction: column;
+    gap: 4px;
 }
 
 .menu a {
     display: block;
-    padding: 12px 0;
+    padding: 8px 0;
     color: #14304f;
     font-weight: bold;
     text-decoration: none;
@@ -141,4 +150,11 @@ section {
     padding: 16px 24px;
     font-size: 13px;
     color: #5b6878;
+    grid-area: footer;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
 }
